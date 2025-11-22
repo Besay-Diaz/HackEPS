@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+        initial-scale = 1.0"
+    />
+    <title>EL MÓN DEL REVÉS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id ="pagina-principal" class="pagina-activa">
+        <div class="logo">
+            <h1>EL MÓN DEL REVÉS</h1>
+        </div>
+        <img id="imatge-mon-reves" src="images/maxresdefault.jpg" alt="Imatge no disponible"/>
+        <button id="entrar-portal", class="boto-portal">
+            ENTRAR AL PORTAL
+        </button>
+    </div>
+
+    <div id = "pagina-portal", class ="pagina-oculta">
+        <header class = "header-portal">
+            <h1>BENVINGUT AL PORTAL</h1>
+            <button id ="tornar-inici", class = "boto-tornar">
+                Tornar a l'inici
+            </button>
+        </header>
+
+        <main class = "contingut-portal">
+            <div class="streams-container">
+                <div class="stream-camera">
+                    <h3>CAMERA REAL</h3>
+                    <img id="stream-real" src="" alt="Stream Camera Real">
+                </div>
+
+                <div class="stream-camera">
+                    <h3>CAMERA VIRTUAL</h3>
+                    <img id="stream-virtual" src="" alt="Stream Camera Virtual">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
