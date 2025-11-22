@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //STREAMS
     const streamReal = document.getElementById('stream-real');
     const streamVirtual = document.getElementById('stream-virtual');
-    const STREAM_REAL_URL = "";
-    const STREAM_VIRTUAL_URL = "";
+    const STREAM_REAL_URL = "http://localhost:5000/video_feed_real";
+    const STREAM_VIRTUAL_URL = "http://localhost:5000/video_feed_virtual";
     let streamsActius = false;
 
     
