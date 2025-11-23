@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     //STREAMS
-    const streamReal = document.getElementById('stream-real');
+    const streamReal1 = document.getElementById('stream-real');
+    const streamReal2 = document.getElementById('stream-real2');
     const streamVirtual = document.getElementById('stream-virtual');
-    const STREAM_REAL_URL = "https://mi-portal.loca.lt/video_feed_real";
-    const STREAM_VIRTUAL_URL = "https://mi-portal.loca.lt/video_feed_virtual";
+    const STREAM_REAL_URL = "http://localhost:8080/video_feed_real1";
+    const STREAM_REAL2_URL = "http://localhost:8080/video_feed_real2";
+    const STREAM_VIRTUAL_URL = "http://localhost:8080/video_feed_virtual";
     let streamsActius = false;
 
     
@@ -41,10 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function iniciarStreams(){
         if(!streamsActius){
-            streamReal.src = STREAM_REAL_URL;
+            streamReal1.src = STREAM_REAL_URL;
+            streamReal2.src = STREAM_REAL2_URL;
             streamVirtual.src = STREAM_VIRTUAL_URL;
 
-            streamReal.classList.remove('error-stream');
+            streamReal1.classList.remove('error-stream');
+            streamReal2.classList.remove('error-stream');
             streamVirtual.classList.remove('error-stream');
 
             streamsActius = true;
@@ -52,14 +56,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function aturarStreams() {
-        streamReal.src = '';
+        streamReal1.src = '';
+        streamReal2.src ='';
         streamVirtual.src = '';
         streamsActius = false;
     }
 
-    streamReal.addEventListener('error', function() {
+    streamReal1.addEventListener('error', function() {
         console.error('Error carregant stream real');
-        streamReal.classList.add('error-stream');
+        streamReal1.classList.add('error-stream');
+    });
+
+    streamReal2.addEventListener('error', function() {
+        console.error('Error carregant stream real');
+        streamReal2.classList.add('error-stream');
     });
 
     streamVirtual.addEventListener('error', function() {
