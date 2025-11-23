@@ -1,8 +1,10 @@
 import cv2
 import threading
 from flask import Flask, Response
+from flask_cors import CORS  # Importar CORS
 
 app = Flask(__name__)
+CORS(app)  # Habilitar CORS para todas las rutas
 
 # Inicializar la cámara y el substractor de fondo
 cap = cv2.VideoCapture(0)
@@ -43,4 +45,4 @@ def video_feed_virtual():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
