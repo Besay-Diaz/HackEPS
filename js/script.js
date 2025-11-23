@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //STREAMS
     const streamReal = document.getElementById('stream-real');
     const streamVirtual = document.getElementById('stream-virtual');
-    const STREAM_REAL_URL = "http://localhost:5000/video_feed_real";
-    const STREAM_VIRTUAL_URL = "http://localhost:5000/video_feed_virtual";
+    const STREAM_REAL_URL = "https://mi-portal.loca.lt/video_feed_real";
+    const STREAM_VIRTUAL_URL = "https://mi-portal.loca.lt/video_feed_virtual";
     let streamsActius = false;
 
     
@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
             streamReal.src = STREAM_REAL_URL;
             streamVirtual.src = STREAM_VIRTUAL_URL;
 
-            stream-real.classList.remove('error-stream');
-            stream-virtual.classList.remove('error-stream');
+            streamReal.classList.remove('error-stream');
+            streamVirtual.classList.remove('error-stream');
 
             streamsActius = true;
         }
